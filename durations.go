@@ -61,7 +61,7 @@ func Weekof(date time.Time) time.Time {
 		date = date.Add(-time.Hour)
 	}
 
-	for int(date.Weekday()) < int(time.Sunday) {
+	for int(date.Weekday()) < int(time.Monday) {
 		date = date.Add(time.Hour)
 	}
 
