@@ -52,9 +52,8 @@ func Hours(n int) time.Duration {
 	return time.Duration(n) * time.Hour
 }
 
-// Weekof returns a time.Time of the Monday of the week of the given time.Time.
-// This is useful for communicating ISO 8601 weeks.
-// read more at https://golang.org/pkg/time/#Time.ISOWeek
+// Weekof returns the time.Time anchored to the Monday of the week of the given time.Time.
+// This is useful for communicating ISO 8601 weeks. See https://golang.org/pkg/time/#Time.ISOWeek
 func Weekof(date time.Time) time.Time {
 
 	for int(date.Weekday()) > int(time.Monday) {
