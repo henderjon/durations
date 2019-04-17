@@ -1,3 +1,10 @@
+[![GoDoc](https://godoc.org/github.com/henderjon/durations?status.svg)](https://godoc.org/github.com/henderjon/durations)
+[![License: BSD-3](https://img.shields.io/badge/license-BSD--3-blue.svg)](https://img.shields.io/badge/license-BSD--3-blue.svg)
+[![Go Report Card](https://goreportcard.com/badge/github.com/henderjon/durations)](https://goreportcard.com/report/github.com/henderjon/durations)
+[![Build Status](https://travis-ci.org/henderjon/durations.svg?branch=dev)](https://travis-ci.org/henderjon/durations)
+![tag](https://img.shields.io/github/tag/henderjon/durations.svg)
+![release](https://img.shields.io/github/release/henderjon/durations.svg)
+
 # durations
 
 some helpful time/duration funcs
