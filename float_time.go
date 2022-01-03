@@ -8,11 +8,13 @@ import (
 	"time"
 )
 
+// FloatTime allows the JSON Un/Marshaling of timestamps sent as floats into time.Time
 type FloatTime struct {
 	Precision time.Duration
 	time.Time
 }
 
+// NewFloatTime allows the JSON Un/Marshaling of timestamps sent as floats into time.Time
 func NewFloatTime() *FloatTime {
 	return &FloatTime{
 		Precision: time.Second,
@@ -20,6 +22,7 @@ func NewFloatTime() *FloatTime {
 	}
 }
 
+// MarshalJSON satisfies the json.Marshaler interface
 func (f *FloatTime) MarshalJSON() ([]byte, error) {
 	var i int64
 	switch true {
@@ -37,6 +40,7 @@ func (f *FloatTime) MarshalJSON() ([]byte, error) {
 	return []byte(str), nil
 }
 
+// MarshalJSON satisfies the json.Unmarshaler interface
 func (f *FloatTime) UnmarshalJSON(b []byte) error {
 	if string(b) == `null` {
 		return nil
@@ -76,6 +80,7 @@ func (f *FloatTime) UnmarshalJSON(b []byte) error {
 	return nil
 }
 
+// Unix is shorthand for getting the regular unix timestamp from a FloatTime
 func (f *FloatTime) Unix() int64 {
 	return f.Time.Unix()
 }
